@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { MapPinIcon, Menu } from "lucide-react"
+import { Link } from "react-router-dom"
 
 const Navbar = () => {
   return (
@@ -32,11 +33,11 @@ const Navbar = () => {
 
           {/* Auth Buttons */}
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="ghost" size="sm">
-              Log in
+            <Button variant="ghost" size="sm" asChild>
+              <Link to="/login">Log in</Link>
             </Button>
-            <Button variant="default" size="sm">
-              Sign up
+            <Button variant="default" size="sm" asChild>
+              <Link to="/signup">Sign up</Link>
             </Button>
           </div>
 
