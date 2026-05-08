@@ -1,18 +1,13 @@
 import { Button } from "@/components/ui/button"
-import {
-  Code2,
-  Share2,
-  Users,
-  Mail,
-  MapPinIcon,
-} from "lucide-react"
+import { MapPinIcon } from "lucide-react"
+import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa"
 
 const Footer = () => {
   const socialLinks = [
-    { icon: Code2, label: "GitHub", href: "#" },
-    { icon: Share2, label: "Social", href: "#" },
-    { icon: Users, label: "Community", href: "#" },
-    { icon: Mail, label: "Email", href: "#" },
+    { icon: FaGithub, label: "GitHub", href: "#" },
+    { icon: FaTwitter, label: "X", href: "#" },
+    { icon: FaLinkedin, label: "LinkedIn", href: "#" },
+    { icon: FaEnvelope, label: "Email", href: "#" },
   ]
 
   const footerSections = [
