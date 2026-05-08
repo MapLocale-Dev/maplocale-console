@@ -1,13 +1,19 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
-import { TooltipProvider } from './components/ui/tooltip.tsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import { TooltipProvider } from "./components/ui/tooltip.tsx";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-createRoot(document.getElementById('root')!).render(
+import Home from "./pages/Home.tsx";
+
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <TooltipProvider>
-      <App />
-    </TooltipProvider>
+    <BrowserRouter>
+      <TooltipProvider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </TooltipProvider>
+    </BrowserRouter>
   </StrictMode>,
-)
+);
