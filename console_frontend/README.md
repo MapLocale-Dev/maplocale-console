@@ -1,0 +1,1 @@
+# MapLocale Console Frontend
